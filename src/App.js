@@ -1,16 +1,18 @@
 import React from "react";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Header from "./pages/Header";
-import Content from "./pages/Content";
-import Footer from "./pages/Footer";
+import Home from "./pages/Home";
+import iPad from "./pages/iPad";
+import iPhone from "./pages/iPhone";
 function App() {
   return (
-   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Header/>}/>
-      <Route path="/content" element={<Content/>}/>
-      <Route path="/footer" element={<Footer/>}/>
-    </Routes>
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+          <Route index element={<Home></Home>}></Route>
+          <Route path="/iphone" element={<iPhone></iPhone>}/>
+          <Route path="/ipad" element={<iPad></iPad>}/>
+      </Routes>
    </BrowserRouter>
   );
 }
