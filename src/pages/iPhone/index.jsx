@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function iPhone() {
+export default function IPhone() {
   return (
     <div>
       <h1>iPhone</h1>
     </div>
-  )
+  );
 }
-

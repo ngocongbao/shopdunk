@@ -1,8 +1,8 @@
-import React from 'react'
-export default function iPad() {
+import React from "react";
+export default function IPad() {
   return (
-    <div> 
+    <div>
       <h1>iPAD</h1>
     </div>
-  )
+  );
 }
