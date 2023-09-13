@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import banner from "../../assets/BannerIphone.jpg";
+// import React, { useEffect, useState } from "react";
+// import banner from "../../assets/BannerIphone.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
@@ -7,22 +7,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import banner1 from "../../assets/BannerHome1.png";
-import banner2 from "../../assets/BannerHome2.jpg";
-import banner3 from "../../assets/BannerHome3.jpg";
+import banner1 from "../../assets/bannerhome1.png";
+import banner2 from "../../assets/bannerhome2.jpg";
+import banner3 from "../../assets/bannerhome3.jpg";
 import banner4 from "../../assets/BannerHome4.png";
 import banner5 from "../../assets/BannerHome5.png";
 import banner6 from "../../assets/BannerHome6.png";
 import tsv from "../../assets/chao-tan-sv.png"
 import ip14 from "../../assets/iphone14prmax.png"
 export default function Home() {
-  const [image, setImage] = useState(false);
-  useEffect(() => {
-    const img = setTimeout(() => {
-      setImage(true);
-    }, 2000);
-    return () => clearTimeout(img);
-  }, []);
+  // const [image, setImage] = useState(false);
+  // useEffect(() => {
+  //   const img = setTimeout(() => {
+  //     setImage(true);
+  //   }, 2000);
+  //   return () => clearTimeout(img);
+  // }, []);
   return (
     <div>
       {/* <div>
@@ -66,22 +66,37 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="mx-20">
-        <div className="flex justify-around gap-10 items-center w-full my-10">
-          <div className="w-1/4">
+      <div className="mx-56">
+        <div className="flex justify-between w-full my-10">
+          <div className="w-[32%]">
             <img src={banner4} alt="" />
           </div>
-          <div className=" w-1/4">
+          <div className="w-[32%]">
             <img src={banner5} alt=""  />
           </div>
-          <div className="w-1/4">
+          <div className="w-[32%]">
             <img src={banner6} alt="" />
           </div>
         </div>
-        <div >
-          <h1 className="font-bold text-center text-xl">iPhone</h1>
-          <div className="w-full flex">
-            <div className="border-2 w-1/4">
+          <h1 className="font-bold text-center text-xl pt-10 pb-5">iPhone</h1>
+          <div className="flex justify-between items-center gap-2">
+            <div className="border-2 rounded-xl bg-slate-200   ">
+              <div className="">
+                <img src={tsv} alt="" className=""/>
+              </div>
+                <div>
+                  <img src={ip14} alt=""/>
+                </div>
+                <div>
+                  <h3 className="font-bold text-center">IPhone 14 Promax 256GB</h3>
+                  <div className="flex justify-around items-center">
+                    <h4 className="text-blue-700 font-bold">26.150.000đ</h4>
+                    <h5 className="line-through text-gray-400" >34.990.000đ</h5>
+                    <h5 className="text-gray-400">-25%</h5>
+                  </div>
+                </div>
+            </div>
+            <div className="border-2 rounded-xl bg-slate-200 ">
               <div>
                 <img src={tsv} alt="" className=""/>
               </div>
@@ -99,7 +114,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border-2 w-1/4">
+            <div className="border-2 rounded-xl bg-slate-200 ">
               <div>
                 <img src={tsv} alt="" className=""/>
               </div>
@@ -117,25 +132,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="border-2 w-1/4">
-              <div>
-                <img src={tsv} alt="" className=""/>
-              </div>
-              <div className=" ">
-                <div>
-                  <img src={ip14} alt=""/>
-                </div>
-                <div>
-                  <h3 className="font-bold">IPhone 14 Promax 256GB</h3>
-                  <div className="flex">
-                    <h4 className="text-blue-700">26.150.000đ</h4>
-                    <h5 className="line-through text-gray-400" >34.990.000đ</h5>
-                    <h5 className="text-gray-400">-25%</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="border-2 w-1/4">
+            <div className="border-2 rounded-xl bg-slate-200 ">
               <div>
                 <img src={tsv} alt="" className=""/>
               </div>
@@ -154,7 +151,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
