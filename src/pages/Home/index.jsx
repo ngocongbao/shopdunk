@@ -7,14 +7,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import banner1 from "../../assets/bannerhome1.png";
-import banner2 from "../../assets/bannerhome2.jpg";
-import banner3 from "../../assets/bannerhome3.jpg";
+import banner1 from "../../assets/BannerHome1.png";
+import banner2 from "../../assets/BannerHome2.jpg";
+import banner3 from "../../assets/BannerHome3.jpg";
 import banner4 from "../../assets/BannerHome4.png";
 import banner5 from "../../assets/BannerHome5.png";
 import banner6 from "../../assets/BannerHome6.png";
-import tsv from "../../assets/chao-tan-sv.png"
-import ip14 from "../../assets/iphone14prmax.png"
+import tsv from "../../assets/ChaoTanSv.png";
+import ip14 from "../../assets/iphone14prmax.png";
 export default function Home() {
   // const [image, setImage] = useState(false);
   // useEffect(() => {
@@ -72,86 +72,45 @@ export default function Home() {
             <img src={banner4} alt="" />
           </div>
           <div className="w-[32%]">
-            <img src={banner5} alt=""  />
+            <img src={banner5} alt="" />
           </div>
           <div className="w-[32%]">
             <img src={banner6} alt="" />
           </div>
         </div>
-          <h1 className="font-bold text-center text-xl pt-10 pb-5">iPhone</h1>
+        <h1 className="font-bold text-center text-3xl pt-10 pb-5">iPhone</h1>
+        <div>
           <div className="flex justify-between items-center gap-2">
-            <div className="border-2 rounded-xl bg-slate-200   ">
-              <div className="">
-                <img src={tsv} alt="" className=""/>
-              </div>
-                <div>
-                  <img src={ip14} alt=""/>
-                </div>
-                <div>
-                  <h3 className="font-bold text-center">IPhone 14 Promax 256GB</h3>
-                  <div className="flex justify-around items-center">
-                    <h4 className="text-blue-700 font-bold">26.150.000đ</h4>
-                    <h5 className="line-through text-gray-400" >34.990.000đ</h5>
-                    <h5 className="text-gray-400">-25%</h5>
-                  </div>
-                </div>
-            </div>
-            <div className="border-2 rounded-xl bg-slate-200 ">
-              <div>
-                <img src={tsv} alt="" className=""/>
-              </div>
-              <div className=" ">
-                <div>
-                  <img src={ip14} alt=""/>
-                </div>
-                <div>
-                  <h3 className="font-bold">IPhone 14 Promax 256GB</h3>
-                  <div className="flex">
-                    <h4 className="text-blue-700">26.150.000đ</h4>
-                    <h5 className="line-through text-gray-400" >34.990.000đ</h5>
-                    <h5 className="text-gray-400">-25%</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="border-2 rounded-xl bg-slate-200 ">
-              <div>
-                <img src={tsv} alt="" className=""/>
-              </div>
-              <div className=" ">
-                <div>
-                  <img src={ip14} alt=""/>
-                </div>
-                <div>
-                  <h3 className="font-bold">IPhone 14 Promax 256GB</h3>
-                  <div className="flex">
-                    <h4 className="text-blue-700">26.150.000đ</h4>
-                    <h5 className="line-through text-gray-400" >34.990.000đ</h5>
-                    <h5 className="text-gray-400">-25%</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="border-2 rounded-xl bg-slate-200 ">
-              <div>
-                <img src={tsv} alt="" className=""/>
-              </div>
-              <div className=" ">
-                <div>
-                  <img src={ip14} alt=""/>
-                </div>
-                <div>
-                  <h3 className="font-bold">IPhone 14 Promax 256GB</h3>
-                  <div className="flex">
-                    <h4 className="text-blue-700">26.150.000đ</h4>
-                    <h5 className="line-through text-gray-400" >34.990.000đ</h5>
-                    <h5 className="text-gray-400">-25%</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {[...new Array(4)].map((_,index) => (
+              <ProductItem key={index} />
+            ))}
           </div>
+          <div>
+            <button className="border-2 border-blue-500 rounded-md py-2 px-4 block m-auto text-blue-400 hover:bg-blue-500 hover:text-white my-5 ">Xem tất cả IPhone ></button>
+          </div>
+        </div>
+        <h1 className="font-bold text-center text-3xl pt-10 pb-5">iPad</h1>
       </div>
     </div>
   );
 }
+const ProductItem = () => {
+  return (
+    <div className="border-2 rounded-xl bg-slate-200  flex flex-col items-center p-2">
+      <div className="self-end w-[100px]">
+        <img src={tsv} alt="" className="w-full object-cover h-full" />
+      </div>
+      <div>
+        <img src={ip14} alt="" />
+      </div>
+      <div>
+        <h3 className="font-bold text-center">IPhone 14 Promax 256GB</h3>
+        <div className="flex justify-between items-center">
+          <h4 className="text-blue-700 font-bold">26.150.000đ</h4>
+          <h5 className="line-through text-gray-400">34.990.000đ</h5>
+          <h5 className="text-gray-400">-25%</h5>
+        </div>
+      </div>
+    </div>
+  );
+};
