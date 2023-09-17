@@ -20,9 +20,13 @@ import ipad from "../../assets/Ipad.png";
 import mac from "../../assets/MacBook.png";
 import ss from "../../assets/SanSang.png";
 import watch from "../../assets/Watch.png";
-
+import airpod from "../../assets/airpod 2 pro.png";
 import ProductItem from "../../components/product-item";
-
+import moi from "../../assets/new.png";
+import sac from "../../assets/sac.png"
+import bannerfooter from "../../assets/BannerFooter.jpeg"
+import News from "../../components/News";
+import bannerfooter1 from "../../assets/bannerfooter1.png"
 export default function Home() {
   // const [image, setImage] = useState(false);
   // useEffect(() => {
@@ -92,7 +96,7 @@ export default function Home() {
             {[...new Array(5)].map((_, index) => (
               <ProductItem
                 key={index}
-                name="IPhone 14pro max"
+                name="IPhone 14pro Max 128GB"
                 img={ip14}
                 price={"19000000"}
                 oldPrice={"20000000"}
@@ -112,11 +116,11 @@ export default function Home() {
             {[...new Array(5)].map((_, index) => (
               <ProductItem
                 key={index}
-                name="Ipad 14pro max"
+                name="Ipad Air 4"
                 img={ipad}
                 price={"19000000"}
                 oldPrice={"20000000"}
-                tag={tsv}
+                tag={sale}
               />
             ))}
           </div>
@@ -129,9 +133,18 @@ export default function Home() {
         <h1 className="font-bold text-center text-3xl pt-10 pb-5">Mac</h1>
         <div>
           <div className="flex justify-between items-center gap-2">
-            {/* {[...new Array(5)].map((_, index) => (
-              <Mac key={index} />
-            ))} */}
+            {
+              [...new Array(4)].map((_,index)=>(
+                <ProductItem
+                key={index}
+                name="MacBook Air M1 2020 (8GB)|256GB SSD "
+                img={mac}
+                price={"19000000"}
+                oldPrice={"20000000"}
+                tag={ss}
+                />
+              )
+            )}  
           </div>
           <div>
             <button className="border-2 border-blue-500 rounded-md py-2 px-4 block mx-auto my-6 text-blue-400 hover:bg-blue-500 hover:text-white  ">
@@ -142,15 +155,107 @@ export default function Home() {
         <h1 className="font-bold text-center text-3xl pt-10 pb-5">Watch</h1>
         <div>
           <div className="flex justify-between items-center gap-2">
-            {/* {[...new Array(5)].map((_, index) => (
-              <Watch key={index} />
-            ))} */}
+          {
+              [...new Array(5)].map((_,index)=>(
+                <ProductItem
+                key={index}
+                name="Apple Watch Series 7 Nhôm GPS"
+                img={watch}
+                price={"19000000"}
+                oldPrice={"20000000"}
+                tag={tsv}
+                />
+              )
+            )}  
           </div>
           <div>
             <button className="border-2 border-blue-500 rounded-md py-2 px-4 block mx-auto my-6 text-blue-400 hover:bg-blue-500 hover:text-white  ">
               Xem tất cả Watch {"> "}
             </button>
           </div>
+        </div>
+        <h1 className="font-bold text-center text-3xl pt-10 pb-5">Âm thanh</h1>
+        <div>
+          <div className="flex justify-between items-center gap-2">
+          {
+              [...new Array(5)].map((_,index)=>(
+                <ProductItem
+                key={index}
+                name=" AirPod Pro 2"
+                img={airpod}
+                price={"19000000"}
+                oldPrice={"20000000"}
+                tag={moi}
+                />
+              )
+            )}  
+          </div>
+          <div>
+            <button className="border-2 border-blue-500 rounded-md py-2 px-4 block mx-auto my-6 text-blue-400 hover:bg-blue-500 hover:text-white  ">
+              Xem tất cả Âm thanh {"> "}
+            </button>
+          </div>
+        </div>
+        <h1 className="font-bold text-center text-3xl pt-10 pb-5">Phụ kiện</h1>
+        <div>
+          <div className="flex justify-between items-center gap-2">
+          {
+              [...new Array(5)].map((_,index)=>(
+                <ProductItem
+                key={index}
+                name="Sạc 20W USB-C Power Adapter"
+                img={sac}
+                price={"19000000"}
+                oldPrice={"20000000"}
+                tag={moi}
+                />
+              )
+            )}  
+          </div>
+          <div>
+            <button className="border-2 border-blue-500 rounded-md py-2 px-4 block mx-auto my-6 text-blue-400 hover:bg-blue-500 hover:text-white  ">
+              Xem tất cả Phụ kiện {"> "}
+            </button>
+          </div>
+        </div>
+        <div>
+          <img src={bannerfooter} alt=""
+          className="w-full h-full object-cover"
+          />
+        </div>
+        <div>
+        <h1 className="font-bold text-center text-3xl pt-10 pb-5">Tin tức</h1>
+        <div>
+          <div className="flex justify-between items-center gap-2">
+            {
+                [...new Array(4)].map((_,index)=>(
+                  <News
+                  key={index}
+                  img={bannerfooter1}
+                  title="Chuyên gia giải đáp nên mua Iphone 15 Plus hay 14 là tốt nhất"
+                  date="13/09/2023"
+                  />
+                )
+              )}  
+            </div>
+            <div>
+            <button className="border-2 border-blue-500 rounded-md py-2 px-4 block mx-auto my-6 text-blue-400 hover:bg-blue-500 hover:text-white  ">
+              Xem tất cả Tin tức {"> "}
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div className="bg-slate-200 leading-10">
+        <h1 className="text-center font-bold">Đăng kí nhận tin từ ShopDunk</h1>
+        <h3 className="text-center">Thông tin sản phẩm mới nhất và chương trình khuyến mãi </h3>
+        <div className="flex justify-center items-center relative">
+          <input
+          type="email"
+          placeholder="Nhập Email"
+          className=" w-1/3 rounded-2xl pl-2"
+          />
+          <button className="absolute top-50% -translate-y-[50%] text-white text-center bg-blue-500 ">Đăng kí</button>
         </div>
       </div>
     </div>
